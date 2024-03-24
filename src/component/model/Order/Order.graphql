@@ -1,0 +1,6 @@
+fragment Order on Order {
+  id
+  iid
+  sid
+  uuid
+}

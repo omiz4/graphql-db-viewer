@@ -1,0 +1,10 @@
+# import Order from "../Order/Order.graphql"
+
+query fetchDBRecords($input: ListRecordsInput!) {
+  mydb_records(input: $input) {
+    __typename
+    ... on Order {
+      ...Order
+    }
+  }
+}

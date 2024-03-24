@@ -1,0 +1,36 @@
+{
+  "name": "my-db-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "panda codegen",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "generate": "nitrogql generate",
+    "lint": "biome lint . --apply",
+    "format:prettier": "prettier -w './**/*.{md,yaml,yml}' ",
+    "format:biome": "biome format --write .",
+    "format": "concurrently npm:format:*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.2",
+    "@nitrogql/cli": "^1.7.0-beta.2",
+    "@nitrogql/rollup-plugin": "^1.7.0-beta.2",
+    "@pandacss/dev": "^0.36.1",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.9.9",
+    "graphql": "^16.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.1"
+  }
+}
